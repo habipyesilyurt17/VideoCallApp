@@ -295,6 +295,8 @@
 				DEVELOPMENT_TEAM = 8945457R7S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoCallApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "So the audience and other broadcasters can see you";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "So the audience and other broadcasters can hear you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -323,6 +325,8 @@
 				DEVELOPMENT_TEAM = 8945457R7S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = VideoCallApp/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "So the audience and other broadcasters can see you";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "So the audience and other broadcasters can hear you";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
