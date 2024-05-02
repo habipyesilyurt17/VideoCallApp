@@ -13,6 +13,12 @@
 		623ED98A2BE40EE300531A7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623ED9882BE40EE300531A7E /* Main.storyboard */; };
 		623ED98C2BE40EE400531A7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 623ED98B2BE40EE400531A7E /* Assets.xcassets */; };
 		623ED98F2BE40EE400531A7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 623ED98D2BE40EE400531A7E /* LaunchScreen.storyboard */; };
+		623ED9982BE41B1300531A7E /* AIAEC in Frameworks */ = {isa = PBXBuildFile; productRef = 623ED9972BE41B1300531A7E /* AIAEC */; };
+		623ED99A2BE41B1300531A7E /* AINS in Frameworks */ = {isa = PBXBuildFile; productRef = 623ED9992BE41B1300531A7E /* AINS */; };
+		623ED99C2BE41B1300531A7E /* AudioBeauty in Frameworks */ = {isa = PBXBuildFile; productRef = 623ED99B2BE41B1300531A7E /* AudioBeauty */; };
+		623ED99E2BE41B1300531A7E /* ClearVision in Frameworks */ = {isa = PBXBuildFile; productRef = 623ED99D2BE41B1300531A7E /* ClearVision */; };
+		623ED9A02BE41B1300531A7E /* ContentInspect in Frameworks */ = {isa = PBXBuildFile; productRef = 623ED99F2BE41B1300531A7E /* ContentInspect */; };
+		623ED9A32BE41BFE00531A7E /* AgoraRtmKit in Frameworks */ = {isa = PBXBuildFile; productRef = 623ED9A22BE41BFE00531A7E /* AgoraRtmKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +37,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				623ED9A32BE41BFE00531A7E /* AgoraRtmKit in Frameworks */,
+				623ED99C2BE41B1300531A7E /* AudioBeauty in Frameworks */,
+				623ED9A02BE41B1300531A7E /* ContentInspect in Frameworks */,
+				623ED9982BE41B1300531A7E /* AIAEC in Frameworks */,
+				623ED99E2BE41B1300531A7E /* ClearVision in Frameworks */,
+				623ED99A2BE41B1300531A7E /* AINS in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +95,14 @@
 			dependencies = (
 			);
 			name = VideoCallApp;
+			packageProductDependencies = (
+				623ED9972BE41B1300531A7E /* AIAEC */,
+				623ED9992BE41B1300531A7E /* AINS */,
+				623ED99B2BE41B1300531A7E /* AudioBeauty */,
+				623ED99D2BE41B1300531A7E /* ClearVision */,
+				623ED99F2BE41B1300531A7E /* ContentInspect */,
+				623ED9A22BE41BFE00531A7E /* AgoraRtmKit */,
+			);
 			productName = VideoCallApp;
 			productReference = 623ED97F2BE40EE300531A7E /* VideoCallApp.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +131,10 @@
 				Base,
 			);
 			mainGroup = 623ED9762BE40EE300531A7E;
+			packageReferences = (
+				623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */,
+				623ED9A12BE41BFE00531A7E /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */,
+			);
 			productRefGroup = 623ED9802BE40EE300531A7E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,6 +391,58 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtcEngine_iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.3.1;
+			};
+		};
+		623ED9A12BE41BFE00531A7E /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraRtm_iOS";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		623ED9972BE41B1300531A7E /* AIAEC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AIAEC;
+		};
+		623ED9992BE41B1300531A7E /* AINS */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AINS;
+		};
+		623ED99B2BE41B1300531A7E /* AudioBeauty */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = AudioBeauty;
+		};
+		623ED99D2BE41B1300531A7E /* ClearVision */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = ClearVision;
+		};
+		623ED99F2BE41B1300531A7E /* ContentInspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 623ED9962BE41B1300531A7E /* XCRemoteSwiftPackageReference "AgoraRtcEngine_iOS" */;
+			productName = ContentInspect;
+		};
+		623ED9A22BE41BFE00531A7E /* AgoraRtmKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 623ED9A12BE41BFE00531A7E /* XCRemoteSwiftPackageReference "AgoraRtm_iOS" */;
+			productName = AgoraRtmKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 623ED9772BE40EE300531A7E /* Project object */;
 }
