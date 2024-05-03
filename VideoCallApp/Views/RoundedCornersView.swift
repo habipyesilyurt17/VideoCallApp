@@ -10,6 +10,6 @@ import UIKit
 final class RoundedCornersView: UIView {
     override func layoutSubviews() {
         super.layoutSubviews()
-        roundCorners([.topRight, .topLeft], radius: 15)
+        roundCorners(.allCorners, radius: 15)
     }
 }
