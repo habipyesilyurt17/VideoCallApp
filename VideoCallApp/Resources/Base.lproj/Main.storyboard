@@ -133,6 +133,50 @@
             </objects>
             <point key="canvasLocation" x="-730.53435114503816" y="47.183098591549296"/>
         </scene>
+        <!--Video CallVC-->
+        <scene sceneID="hY8-39-l0d">
+            <objects>
+                <viewController storyboardIdentifier="VideoCallVC" id="uM5-tB-ZPI" customClass="VideoCallVC" customModule="VideoCallApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fhy-hr-AbJ">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LnZ-e1-LV3" userLabel="VideoView">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" red="0.20392156859999999" green="0.49803921569999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="I8X-P8-iMD">
+                                <rect key="frame" x="240" y="59" width="137" height="32"/>
+                                <segments>
+                                    <segment title="Floating"/>
+                                    <segment title="Grid"/>
+                                </segments>
+                                <connections>
+                                    <action selector="styleChange:" destination="uM5-tB-ZPI" eventType="valueChanged" id="oCN-P3-Ypa"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2rC-6R-BF6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="I8X-P8-iMD" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="2rC-6R-BF6" secondAttribute="leading" symbolic="YES" id="Zgb-VM-Wr5"/>
+                            <constraint firstItem="I8X-P8-iMD" firstAttribute="top" secondItem="2rC-6R-BF6" secondAttribute="top" id="aJs-Ov-Lg3"/>
+                            <constraint firstItem="LnZ-e1-LV3" firstAttribute="bottom" secondItem="2rC-6R-BF6" secondAttribute="bottom" id="chD-Va-2LV"/>
+                            <constraint firstItem="LnZ-e1-LV3" firstAttribute="top" secondItem="2rC-6R-BF6" secondAttribute="top" id="f5F-Ik-r2k"/>
+                            <constraint firstItem="2rC-6R-BF6" firstAttribute="trailing" secondItem="I8X-P8-iMD" secondAttribute="trailing" constant="16" id="ffR-dO-MN1"/>
+                            <constraint firstItem="LnZ-e1-LV3" firstAttribute="trailing" secondItem="2rC-6R-BF6" secondAttribute="trailing" id="mk7-Gh-xGl"/>
+                            <constraint firstItem="LnZ-e1-LV3" firstAttribute="leading" secondItem="2rC-6R-BF6" secondAttribute="leading" id="x7e-ph-83S"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="styleToggle" destination="I8X-P8-iMD" id="K33-P5-L7N"/>
+                        <outlet property="videoView" destination="LnZ-e1-LV3" id="mnI-ka-h46"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Dp-vS-lm7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="49.618320610687022" y="46.478873239436624"/>
+        </scene>
     </scenes>
     <resources>
         <image name="video.fill" catalog="system" width="128" height="81"/>
