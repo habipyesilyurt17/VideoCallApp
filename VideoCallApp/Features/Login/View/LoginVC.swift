@@ -9,7 +9,7 @@ import UIKit
 
 protocol LoginViewInterface: AnyObject {
     func prepareTextFieldDelegate()
-    func showHomePage()
+    func showVideoCallPage()
     func tapGestureRecognizer()
     func keyboardShow()
     func keyboardHide()
@@ -33,6 +33,16 @@ final class LoginVC: UIViewController {
     }
     
     @IBAction func continueButtonTapped(_ sender: Any) {
+        guard let username = usernameTextField.text else { return }
+        if viewModel.validateUsername(username) {
+            errorLabel.isHidden = true
+            viewModel.saveUsername(username)
+            showVideoCallPage()
+        } else {
+            errorLabel.isHidden = false
+            errorLabel.text = viewModel.errorMessage
+            errorLabel.textColor = .red
+        }
     }
     
     @objc func keyboardWillShow(notification: NSNotification) {
@@ -69,8 +79,8 @@ extension LoginVC: LoginViewInterface {
         usernameTextField.delegate = self
     }
     
-    func showHomePage() {
-        // present home view
+    func showVideoCallPage() {
+        // present video call page
     }
     
     func tapGestureRecognizer() {

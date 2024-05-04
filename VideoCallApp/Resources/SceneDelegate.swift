@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var initialViewController: UIViewController
         
-        if AppLocalStorage.shared.readValue(forKey: StorageConstants.IS_USER_NAME_CREATED) ?? false {
+        if AppLocalStorage.shared.readValue(forKey: LocalStorageKeys.IS_USER_NAME_CREATED) ?? false {
             initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeVC")
         } else {
             initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")

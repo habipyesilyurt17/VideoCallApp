@@ -35,7 +35,7 @@
 		628DE7EC2BE43FA700A4BEBE /* VirtualBackground in Frameworks */ = {isa = PBXBuildFile; productRef = 628DE7EB2BE43FA700A4BEBE /* VirtualBackground */; };
 		62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */; };
 		62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */; };
-		62BDD76F2BE5B45E000CEE16 /* StorageConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD76E2BE5B45E000CEE16 /* StorageConstants.swift */; };
+		62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7702BE5C0A9000CEE16 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,7 +51,7 @@
 		623ED9B02BE43AEB00531A7E /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalStorage.swift; sourceTree = "<group>"; };
-		62BDD76E2BE5B45E000CEE16 /* StorageConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageConstants.swift; sourceTree = "<group>"; };
+		62BDD7702BE5C0A9000CEE16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +185,7 @@
 			isa = PBXGroup;
 			children = (
 				62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */,
-				62BDD76E2BE5B45E000CEE16 /* StorageConstants.swift */,
+				62BDD7702BE5C0A9000CEE16 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -288,11 +288,11 @@
 				623ED9832BE40EE300531A7E /* AppDelegate.swift in Sources */,
 				623ED9AA2BE42CF800531A7E /* LoginVC.swift in Sources */,
 				62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */,
-				62BDD76F2BE5B45E000CEE16 /* StorageConstants.swift in Sources */,
 				623ED9AE2BE43A8300531A7E /* UIView+Extensions.swift in Sources */,
 				623ED9B12BE43AEB00531A7E /* RoundedCornersView.swift in Sources */,
 				623ED9852BE40EE300531A7E /* SceneDelegate.swift in Sources */,
 				62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */,
+				62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

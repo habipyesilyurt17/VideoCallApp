@@ -20,7 +20,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0eh-aN-cgc" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="852.33333333333337"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Entry Screen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWk-QL-GCW">
                                                 <rect key="frame" x="16" y="110" width="361" height="29"/>
@@ -39,14 +39,14 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9A9-xj-79C" customClass="RoundedCornersView" customModule="VideoCallApp" customModuleProvider="target">
                                                 <rect key="frame" x="24" y="362" width="345" height="255.66666666666663"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcN-eU-8DA" userLabel="errorLabel">
-                                                        <rect key="frame" x="16" y="8" width="313" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcN-eU-8DA" userLabel="errorLabel">
+                                                        <rect key="frame" x="16" y="15.999999999999998" width="313" height="20.333333333333329"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PZd-1h-QNB">
-                                                        <rect key="frame" x="16" y="53" width="313" height="50"/>
+                                                        <rect key="frame" x="16" y="60.333333333333314" width="313" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="rVm-zj-XM4"/>
                                                         </constraints>
@@ -54,7 +54,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yE4-7S-JYy">
-                                                        <rect key="frame" x="16" y="138" width="313" height="50"/>
+                                                        <rect key="frame" x="16" y="145.33333333333331" width="313" height="50"/>
                                                         <color key="backgroundColor" red="0.20392156859999999" green="0.49803921569999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="hDN-4i-QEU"/>
@@ -80,9 +80,10 @@
                                                     <constraint firstItem="PZd-1h-QNB" firstAttribute="leading" secondItem="9A9-xj-79C" secondAttribute="leading" constant="16" id="3tV-YO-kWQ"/>
                                                     <constraint firstAttribute="trailing" secondItem="xcN-eU-8DA" secondAttribute="trailing" constant="16" id="Ykr-bc-y94"/>
                                                     <constraint firstItem="yE4-7S-JYy" firstAttribute="leading" secondItem="9A9-xj-79C" secondAttribute="leading" constant="16" id="a5Z-jo-LQY"/>
+                                                    <constraint firstAttribute="bottom" secondItem="yE4-7S-JYy" secondAttribute="bottom" constant="60.329999999999998" id="dmK-aJ-Wym"/>
                                                     <constraint firstAttribute="trailing" secondItem="yE4-7S-JYy" secondAttribute="trailing" constant="16" id="jZS-fl-Oe9"/>
                                                     <constraint firstItem="xcN-eU-8DA" firstAttribute="leading" secondItem="9A9-xj-79C" secondAttribute="leading" constant="16" id="l76-ld-6by"/>
-                                                    <constraint firstItem="xcN-eU-8DA" firstAttribute="top" secondItem="9A9-xj-79C" secondAttribute="top" constant="8" id="l92-Wx-xRW"/>
+                                                    <constraint firstItem="xcN-eU-8DA" firstAttribute="top" secondItem="9A9-xj-79C" secondAttribute="top" constant="16" id="pOg-VM-pGz"/>
                                                     <constraint firstItem="PZd-1h-QNB" firstAttribute="top" secondItem="xcN-eU-8DA" secondAttribute="bottom" constant="24" id="rjD-16-Iaj"/>
                                                     <constraint firstItem="yE4-7S-JYy" firstAttribute="top" secondItem="PZd-1h-QNB" secondAttribute="bottom" constant="35" id="xAJ-KN-Utw"/>
                                                     <constraint firstAttribute="trailing" secondItem="PZd-1h-QNB" secondAttribute="trailing" constant="16" id="xLx-cz-9pr"/>
