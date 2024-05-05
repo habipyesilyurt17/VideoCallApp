@@ -7,34 +7,33 @@
 
 import UIKit
 import AgoraUIKit
+import AgoraRtcKit
 
 final class VideoCallVC: UIViewController {
     
     @IBOutlet var videoView: AgoraVideoViewer!
     @IBOutlet weak var styleToggle: UISegmentedControl!
-    
-    // Fill the App ID of your project generated on Agora Console.
-    let appId: String = ""
 
-    // Fill the temp token generated on Agora Console.
-    let token: String? = ""
-
-    // Fill the channel name.
-    let channelName: String = ""
+    private let viewModel = VideoCallViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        initializeAndJoinChannel()
-        styleChange(styleToggle)
-        view.bringSubviewToFront(styleToggle)
+        viewModel.fetchToken(
+            tokenType: "rtc",
+            channel: VideoCallConstants.CHANNEL_NAME,
+            role: .broadcaster
+        ) {
+            DispatchQueue.main.sync {
+                self.initializeAndJoinChannel()
+                self.styleChange(self.styleToggle)
+                self.view.bringSubviewToFront(self.styleToggle)
+            }
+        }
+        navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        // burayı kontrol et
-//        if videoView != nil {
-//            videoView.exit()
-//        }
         videoView.exit()
     }
     
@@ -49,15 +48,15 @@ final class VideoCallVC: UIViewController {
     private func initializeAndJoinChannel() {
         videoView = AgoraVideoViewer(
             connectionData: AgoraConnectionData(
-                appId: appId,
-                rtcToken: token
+                appId: VideoCallConstants.APP_ID,
+                rtcToken: viewModel.token
             )
         )
         videoView.fills(view: self.view)
 
         videoView.join(
-            channel: channelName,
-            with: token,
+            channel: VideoCallConstants.CHANNEL_NAME,
+            with: viewModel.token,
             as: .broadcaster
         )
     }

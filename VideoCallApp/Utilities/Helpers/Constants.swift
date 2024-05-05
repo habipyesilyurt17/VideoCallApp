@@ -17,3 +17,8 @@ struct ValidationErrors {
     static let MUST_CONTAIN_AT_LEAST_ONE_LETTER = "Username must contain at least one letter."
     static let MUST_CONTAIN_AT_LEAST_ONE_DIGIT = "Username must contain at least one digit."
 }
+
+struct VideoCallConstants {
+    static let APP_ID = "6758a3ca238442bc817733de2d6c8014"
+    static let CHANNEL_NAME = "my-bobo-channel-test-on"
+}

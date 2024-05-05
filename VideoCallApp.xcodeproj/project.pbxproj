@@ -26,6 +26,7 @@
 		6245A64B2BE7C2ED004F200E /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A64A2BE7C2ED004F200E /* TokenResponse.swift */; };
 		6245A64D2BE7C379004F200E /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A64C2BE7C379004F200E /* TokenRequest.swift */; };
 		6245A64F2BE7C3FD004F200E /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A64E2BE7C3FD004F200E /* TokenService.swift */; };
+		6245A6542BE7D40E004F200E /* VideoCallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A6532BE7D40E004F200E /* VideoCallViewModel.swift */; };
 		62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */; };
 		62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */; };
 		62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7702BE5C0A9000CEE16 /* Constants.swift */; };
@@ -50,6 +51,7 @@
 		6245A64A2BE7C2ED004F200E /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
 		6245A64C2BE7C379004F200E /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
 		6245A64E2BE7C3FD004F200E /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
+		6245A6532BE7D40E004F200E /* VideoCallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallViewModel.swift; sourceTree = "<group>"; };
 		62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalStorage.swift; sourceTree = "<group>"; };
 		62BDD7702BE5C0A9000CEE16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -200,6 +202,7 @@
 		6245A6502BE7C4CF004F200E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				6245A6532BE7D40E004F200E /* VideoCallViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				623ED9852BE40EE300531A7E /* SceneDelegate.swift in Sources */,
 				62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */,
 				6245A6482BE7C13B004F200E /* NetworkMonitor.swift in Sources */,
+				6245A6542BE7D40E004F200E /* VideoCallViewModel.swift in Sources */,
 				6245A6402BE74B98004F200E /* APIRequest.swift in Sources */,
 				62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */,
 				6245A6442BE7C0B1004F200E /* APIError.swift in Sources */,

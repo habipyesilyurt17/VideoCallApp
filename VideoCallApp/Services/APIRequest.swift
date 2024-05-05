@@ -20,7 +20,7 @@ enum HTTPMethod: String {
     case post
 }
 
-class APIRequest<Parameters: Encodable, Model: Decodable> {
+final class APIRequest<Parameters: Encodable, Model: Decodable> {
     
     static func call(
         scheme: String = Config.shared.scheme,
@@ -31,9 +31,9 @@ class APIRequest<Parameters: Encodable, Model: Decodable> {
         completion: @escaping CompletionHandler,
         failure: @escaping FailureHandler
     ) {
-        if !NetworkMonitor.shared.isReachable {
-            return failure(.noInternet)
-        }
+//        if !NetworkMonitor.shared.isReachable {
+//            return failure(.noInternet)
+//        }
         
         var components = URLComponents()
         components.scheme = scheme

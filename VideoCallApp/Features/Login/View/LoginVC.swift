@@ -80,7 +80,10 @@ extension LoginVC: LoginViewInterface {
     }
     
     func showVideoCallPage() {
-        // present video call page
+        guard let videoCallVC = storyboard?.instantiateViewController(withIdentifier: "VideoCallVC") as? VideoCallVC else {
+            return
+        }
+        navigationController?.pushViewController(videoCallVC, animated: true)        
     }
     
     func tapGestureRecognizer() {

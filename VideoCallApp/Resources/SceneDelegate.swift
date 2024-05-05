@@ -19,19 +19,28 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        var initialViewController: UIViewController
-        
         if AppLocalStorage.shared.readValue(forKey: LocalStorageKeys.IS_USER_NAME_CREATED) ?? false {
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "HomeVC")
+            showViewController(withIdentifier: "VideoCallVC", in: window)
         } else {
-            initialViewController = storyboard.instantiateViewController(withIdentifier: "LoginVC")
+            showViewController(withIdentifier: "LoginVC", in: window, embedInNavigationController: true)
         }
         
-        window.rootViewController = initialViewController
         self.window = window
         window.makeKeyAndVisible()
     }
+    
+    func showViewController(withIdentifier identifier: String, in window: UIWindow, embedInNavigationController: Bool = false) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let viewController = storyboard.instantiateViewController(withIdentifier: identifier)
+        
+        if embedInNavigationController {
+            let navigationController = UINavigationController(rootViewController: viewController)
+            window.rootViewController = navigationController
+        } else {
+            window.rootViewController = viewController
+        }
+    }
+
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
