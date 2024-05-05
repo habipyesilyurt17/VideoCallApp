@@ -19,6 +19,13 @@
 		6245A6392BE64F72004F200E /* AgoraAppGroupDataHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 6245A6382BE64F72004F200E /* AgoraAppGroupDataHelper */; };
 		6245A63B2BE64F72004F200E /* AgoraBroadcastExtensionHelper in Frameworks */ = {isa = PBXBuildFile; productRef = 6245A63A2BE64F72004F200E /* AgoraBroadcastExtensionHelper */; };
 		6245A63D2BE64F72004F200E /* AgoraUIKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6245A63C2BE64F72004F200E /* AgoraUIKit */; };
+		6245A6402BE74B98004F200E /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A63F2BE74B98004F200E /* APIRequest.swift */; };
+		6245A6442BE7C0B1004F200E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A6432BE7C0B1004F200E /* APIError.swift */; };
+		6245A6462BE7C0F4004F200E /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A6452BE7C0F4004F200E /* Config.swift */; };
+		6245A6482BE7C13B004F200E /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A6472BE7C13B004F200E /* NetworkMonitor.swift */; };
+		6245A64B2BE7C2ED004F200E /* TokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A64A2BE7C2ED004F200E /* TokenResponse.swift */; };
+		6245A64D2BE7C379004F200E /* TokenRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A64C2BE7C379004F200E /* TokenRequest.swift */; };
+		6245A64F2BE7C3FD004F200E /* TokenService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6245A64E2BE7C3FD004F200E /* TokenService.swift */; };
 		62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */; };
 		62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */; };
 		62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7702BE5C0A9000CEE16 /* Constants.swift */; };
@@ -36,6 +43,13 @@
 		623ED9AD2BE43A8300531A7E /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		623ED9B02BE43AEB00531A7E /* RoundedCornersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersView.swift; sourceTree = "<group>"; };
 		6245A6342BE641BB004F200E /* VideoCallVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCallVC.swift; sourceTree = "<group>"; };
+		6245A63F2BE74B98004F200E /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		6245A6432BE7C0B1004F200E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		6245A6452BE7C0F4004F200E /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
+		6245A6472BE7C13B004F200E /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
+		6245A64A2BE7C2ED004F200E /* TokenResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenResponse.swift; sourceTree = "<group>"; };
+		6245A64C2BE7C379004F200E /* TokenRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenRequest.swift; sourceTree = "<group>"; };
+		6245A64E2BE7C3FD004F200E /* TokenService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TokenService.swift; sourceTree = "<group>"; };
 		62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalStorage.swift; sourceTree = "<group>"; };
 		62BDD7702BE5C0A9000CEE16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -75,6 +89,8 @@
 			isa = PBXGroup;
 			children = (
 				623ED9A62BE42BE600531A7E /* Features */,
+				6245A6492BE7C2B6004F200E /* Models */,
+				6245A63E2BE742C8004F200E /* Services */,
 				623ED9AB2BE43A4B00531A7E /* Utilities */,
 				623ED9AF2BE43AC900531A7E /* Views */,
 				623ED9A52BE42BD500531A7E /* Resources */,
@@ -150,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				6245A6332BE6419E004F200E /* View */,
+				6245A6502BE7C4CF004F200E /* ViewModel */,
 			);
 			path = VideoCall;
 			sourceTree = "<group>";
@@ -160,6 +177,31 @@
 				6245A6342BE641BB004F200E /* VideoCallVC.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		6245A63E2BE742C8004F200E /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				6245A63F2BE74B98004F200E /* APIRequest.swift */,
+				6245A64E2BE7C3FD004F200E /* TokenService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		6245A6492BE7C2B6004F200E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6245A64A2BE7C2ED004F200E /* TokenResponse.swift */,
+				6245A64C2BE7C379004F200E /* TokenRequest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6245A6502BE7C4CF004F200E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		62BDD7632BE46651000CEE16 /* ViewModel */ = {
@@ -175,6 +217,9 @@
 			children = (
 				62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */,
 				62BDD7702BE5C0A9000CEE16 /* Constants.swift */,
+				6245A6432BE7C0B1004F200E /* APIError.swift */,
+				6245A6452BE7C0F4004F200E /* Config.swift */,
+				6245A6472BE7C13B004F200E /* NetworkMonitor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -260,13 +305,20 @@
 			files = (
 				623ED9832BE40EE300531A7E /* AppDelegate.swift in Sources */,
 				623ED9AA2BE42CF800531A7E /* LoginVC.swift in Sources */,
+				6245A64B2BE7C2ED004F200E /* TokenResponse.swift in Sources */,
 				62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */,
 				623ED9AE2BE43A8300531A7E /* UIView+Extensions.swift in Sources */,
+				6245A64D2BE7C379004F200E /* TokenRequest.swift in Sources */,
 				6245A6352BE641BB004F200E /* VideoCallVC.swift in Sources */,
+				6245A6462BE7C0F4004F200E /* Config.swift in Sources */,
 				623ED9B12BE43AEB00531A7E /* RoundedCornersView.swift in Sources */,
 				623ED9852BE40EE300531A7E /* SceneDelegate.swift in Sources */,
 				62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */,
+				6245A6482BE7C13B004F200E /* NetworkMonitor.swift in Sources */,
+				6245A6402BE74B98004F200E /* APIRequest.swift in Sources */,
 				62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */,
+				6245A6442BE7C0B1004F200E /* APIError.swift in Sources */,
+				6245A64F2BE7C3FD004F200E /* TokenService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
