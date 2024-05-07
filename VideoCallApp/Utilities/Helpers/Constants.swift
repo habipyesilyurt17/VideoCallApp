@@ -22,3 +22,10 @@ struct VideoCallConstants {
     static let APP_ID = "6758a3ca238442bc817733de2d6c8014"
     static let CHANNEL_NAME = "my-bobo-channel-test-on"
 }
+
+struct ChatConstants {
+    static let APP_KEY = "611142780#1328118"
+    static let ORG_NAME = "611142780"
+    static let APP_NAME = "1328118"
+    static let HOST = "a61.chat.agora.io"
+}

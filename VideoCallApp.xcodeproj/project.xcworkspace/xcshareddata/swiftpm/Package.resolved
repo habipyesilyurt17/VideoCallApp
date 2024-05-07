@@ -1,6 +1,15 @@
 {
   "pins" : [
     {
+      "identity" : "agorachat_ios",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/AgoraIO/AgoraChat_iOS.git",
+      "state" : {
+        "revision" : "704622b761d4dd04c231efcf21302de0635f35c0",
+        "version" : "1.2.0"
+      }
+    },
+    {
       "identity" : "agorartcengine_ios",
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/AgoraIO/AgoraRtcEngine_iOS",

@@ -27,6 +27,8 @@ final class APIRequest<Parameters: Encodable, Model: Decodable> {
         host: String = Config.shared.host,
         path: String,
         method: HTTPMethod,
+        authorized: Bool = false,
+        token: String? = nil,
         parameters: Parameters? = nil,
         completion: @escaping CompletionHandler,
         failure: @escaping FailureHandler
@@ -52,6 +54,10 @@ final class APIRequest<Parameters: Encodable, Model: Decodable> {
         
         if let parameters = parameters {
             request.httpBody = try? JSONEncoder().encode(parameters)
+        }
+        
+        if authorized, let token = token {
+            request.addValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
         }
         
         let task = URLSession.shared.dataTask(with: request) { data, _, error in

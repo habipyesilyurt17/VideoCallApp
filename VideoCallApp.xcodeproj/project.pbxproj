@@ -30,6 +30,12 @@
 		62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */; };
 		62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */; };
 		62BDD7712BE5C0A9000CEE16 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62BDD7702BE5C0A9000CEE16 /* Constants.swift */; };
+		62E611E62BE8546C00FD0D61 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E611E52BE8546C00FD0D61 /* ChatVC.swift */; };
+		62E611E92BE854C300FD0D61 /* AgoraChat in Frameworks */ = {isa = PBXBuildFile; productRef = 62E611E82BE854C300FD0D61 /* AgoraChat */; };
+		62E611EC2BE91BBE00FD0D61 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E611EB2BE91BBE00FD0D61 /* ChatViewModel.swift */; };
+		62E611EE2BE91CAD00FD0D61 /* ChatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E611ED2BE91CAD00FD0D61 /* ChatService.swift */; };
+		62E611F02BE91DEB00FD0D61 /* RegisterUserResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E611EF2BE91DEB00FD0D61 /* RegisterUserResponse.swift */; };
+		62E611F22BE91DFF00FD0D61 /* RegisterUserRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E611F12BE91DFF00FD0D61 /* RegisterUserRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +61,11 @@
 		62BDD7642BE4668A000CEE16 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		62BDD76C2BE5B3AF000CEE16 /* AppLocalStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLocalStorage.swift; sourceTree = "<group>"; };
 		62BDD7702BE5C0A9000CEE16 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		62E611E52BE8546C00FD0D61 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		62E611EB2BE91BBE00FD0D61 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		62E611ED2BE91CAD00FD0D61 /* ChatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatService.swift; sourceTree = "<group>"; };
+		62E611EF2BE91DEB00FD0D61 /* RegisterUserResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserResponse.swift; sourceTree = "<group>"; };
+		62E611F12BE91DFF00FD0D61 /* RegisterUserRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUserRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +76,7 @@
 				6245A6392BE64F72004F200E /* AgoraAppGroupDataHelper in Frameworks */,
 				6245A63B2BE64F72004F200E /* AgoraBroadcastExtensionHelper in Frameworks */,
 				6245A63D2BE64F72004F200E /* AgoraUIKit in Frameworks */,
+				62E611E92BE854C300FD0D61 /* AgoraChat in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +128,7 @@
 		623ED9A62BE42BE600531A7E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				62E611E32BE8543000FD0D61 /* Chat */,
 				6245A6322BE64195004F200E /* VideoCall */,
 				623ED9A72BE42C1000531A7E /* Login */,
 			);
@@ -186,6 +199,7 @@
 			children = (
 				6245A63F2BE74B98004F200E /* APIRequest.swift */,
 				6245A64E2BE7C3FD004F200E /* TokenService.swift */,
+				62E611ED2BE91CAD00FD0D61 /* ChatService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -195,6 +209,8 @@
 			children = (
 				6245A64A2BE7C2ED004F200E /* TokenResponse.swift */,
 				6245A64C2BE7C379004F200E /* TokenRequest.swift */,
+				62E611EF2BE91DEB00FD0D61 /* RegisterUserResponse.swift */,
+				62E611F12BE91DFF00FD0D61 /* RegisterUserRequest.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -227,6 +243,31 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
+		62E611E32BE8543000FD0D61 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				62E611E42BE8543D00FD0D61 /* View */,
+				62E611EA2BE91B9E00FD0D61 /* ViewModel */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		62E611E42BE8543D00FD0D61 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				62E611E52BE8546C00FD0D61 /* ChatVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		62E611EA2BE91B9E00FD0D61 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				62E611EB2BE91BBE00FD0D61 /* ChatViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -247,6 +288,7 @@
 				6245A6382BE64F72004F200E /* AgoraAppGroupDataHelper */,
 				6245A63A2BE64F72004F200E /* AgoraBroadcastExtensionHelper */,
 				6245A63C2BE64F72004F200E /* AgoraUIKit */,
+				62E611E82BE854C300FD0D61 /* AgoraChat */,
 			);
 			productName = VideoCallApp;
 			productReference = 623ED97F2BE40EE300531A7E /* VideoCallApp.app */;
@@ -278,6 +320,7 @@
 			mainGroup = 623ED9762BE40EE300531A7E;
 			packageReferences = (
 				6245A6372BE64F72004F200E /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */,
+				62E611E72BE854C300FD0D61 /* XCRemoteSwiftPackageReference "AgoraChat_iOS" */,
 			);
 			productRefGroup = 623ED9802BE40EE300531A7E /* Products */;
 			projectDirPath = "";
@@ -306,17 +349,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62E611E62BE8546C00FD0D61 /* ChatVC.swift in Sources */,
 				623ED9832BE40EE300531A7E /* AppDelegate.swift in Sources */,
+				62E611F02BE91DEB00FD0D61 /* RegisterUserResponse.swift in Sources */,
 				623ED9AA2BE42CF800531A7E /* LoginVC.swift in Sources */,
 				6245A64B2BE7C2ED004F200E /* TokenResponse.swift in Sources */,
 				62BDD76D2BE5B3AF000CEE16 /* AppLocalStorage.swift in Sources */,
 				623ED9AE2BE43A8300531A7E /* UIView+Extensions.swift in Sources */,
+				62E611F22BE91DFF00FD0D61 /* RegisterUserRequest.swift in Sources */,
 				6245A64D2BE7C379004F200E /* TokenRequest.swift in Sources */,
 				6245A6352BE641BB004F200E /* VideoCallVC.swift in Sources */,
 				6245A6462BE7C0F4004F200E /* Config.swift in Sources */,
 				623ED9B12BE43AEB00531A7E /* RoundedCornersView.swift in Sources */,
 				623ED9852BE40EE300531A7E /* SceneDelegate.swift in Sources */,
+				62E611EC2BE91BBE00FD0D61 /* ChatViewModel.swift in Sources */,
 				62BDD7652BE4668A000CEE16 /* LoginViewModel.swift in Sources */,
+				62E611EE2BE91CAD00FD0D61 /* ChatService.swift in Sources */,
 				6245A6482BE7C13B004F200E /* NetworkMonitor.swift in Sources */,
 				6245A6542BE7D40E004F200E /* VideoCallViewModel.swift in Sources */,
 				6245A6402BE74B98004F200E /* APIRequest.swift in Sources */,
@@ -559,6 +607,14 @@
 				minimumVersion = 4.1.1;
 			};
 		};
+		62E611E72BE854C300FD0D61 /* XCRemoteSwiftPackageReference "AgoraChat_iOS" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AgoraIO/AgoraChat_iOS.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -576,6 +632,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 6245A6372BE64F72004F200E /* XCRemoteSwiftPackageReference "VideoUIKit-iOS" */;
 			productName = AgoraUIKit;
+		};
+		62E611E82BE854C300FD0D61 /* AgoraChat */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 62E611E72BE854C300FD0D61 /* XCRemoteSwiftPackageReference "AgoraChat_iOS" */;
+			productName = AgoraChat;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
